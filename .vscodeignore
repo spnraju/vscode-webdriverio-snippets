@@ -1,0 +1,16 @@
+.vscode/**
+typings/**
+out/test/**
+test/**
+**/*.ts
+**/*.map
+.gitignore
+tsconfig.json
+vsc-extension-quickstart.md
+art/js-icon.psd
+.travis.yml
+test-data/**
+coverage/**
+LICENSE
+CHANGELOG.md
+*.vsix
