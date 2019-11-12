@@ -1,0 +1,48 @@
+{
+  "name": "vscode-webdriverio-snippets",
+  "version": "0.1.0",
+  "description": "WebDriverIO code snippets for Visual Studio Code",
+  "displayName": "WebDriverIO snippets",
+  "publisher": "Raju",
+  "keywords": [
+    "webdriverio",
+    "webdriver",
+    "vscode",
+    "vscodeSnippets"
+  ],
+  "engines": {
+    "vscode": "^0.10.x"
+  },
+  "galleryBanner": {
+    "color": "#000066",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spnraju/vscode-webdriverio-snippets.git"
+  },
+  "scripts": {
+    "publish": "vsce publish",
+    "pack": "vsce package"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "author": "Raju",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spnraju/vscode-webdriverio-snippets/issues"
+  },
+  "homepage": "https://github.com/spnraju/vscode-webdriverio-snippets#readme",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/webdriverio_snippets.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "vsce": "^1.53.0"
+  }
+}
