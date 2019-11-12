@@ -1,0 +1,342 @@
+{
+  "$$": {
+    "prefix": "wd$$",
+    "body": "browser.$$(${1:selector})",
+    "description": "Short way to call the findElements command"
+  },
+  "$": {
+    "prefix": "wd$",
+    "body": "browser.$(${1:selector})",
+    "description": "Short way to call the findElement command"
+  },
+  "call": {
+    "prefix": "wdcall",
+    "body": "browser.call(${1:callback})",
+    "description": "Short way to call the findElement command"
+  },
+  "custom$$": {
+    "prefix": "wdcustom$$",
+    "body": "browser.custom$$(${1:strategyName}, ${2:strategyArguments})",
+    "description": "Allows you to use a custom strategy declared by using browser.addLocatorStrategy"
+  },
+  "custom$": {
+    "prefix": "wdcustom$",
+    "body": "browser.custom$(${1:strategyName}, ${2:strategyArguments})",
+    "description": "Allows you to use a custom strategy declared by using browser.addLocatorStrategy"
+  },
+  "debug": {
+    "prefix": "wddebug",
+    "body": "browser.debug()",
+    "description": "Helps you to debug your integration tests"
+  },
+  "deleteCookies": {
+    "prefix": "wddeleteCookies",
+    "body": "browser.deleteCookies(${1:names})",
+    "description": "Delete cookies visible to the current page"
+  },
+  "execute": {
+    "prefix": "wdexecute",
+    "body": "browser.execute(${1:script}, ${2:arguments})",
+    "description": "Inject a snippet of JavaScript into the page for execution (synchronous) in the context of the currently selected frame"
+  },
+  "executeAsync": {
+    "prefix": "wdexecuteAsync",
+    "body": "browser.executeAsync(${1:script}, ${2:arguments})",
+    "description": "Inject a snippet of JavaScript into the page for execution (asynchronous) in the context of the currently selected frame"
+  },
+  "getCookies": {
+    "prefix": "wdgetCookies",
+    "body": "browser.getCookies(${1:names})",
+    "description": "Retrieve a cookie visible to the current page"
+  },
+  "getWindowSize": {
+    "prefix": "wdgetWindowSize",
+    "body": "browser.getWindowSize()",
+    "description": "Returns browser window size"
+  },
+  "keys": {
+    "prefix": "wdkeys",
+    "body": "browser.keys(${1:value})",
+    "description": "Send a sequence of key strokes to the active element"
+  },
+  "newWindow": {
+    "prefix": "wdnewWindow",
+    "body": "browser.newWindow(${1:url}, ${2:windowName}, ${3:windowFeatures})",
+    "description": "Open new window in browser."
+  },
+  "pause": {
+    "prefix": "wdpause",
+    "body": "browser.pause(${1:milliseconds})",
+    "description": "Pauses execution for a specific amount of time"
+  },
+  "react$$": {
+    "prefix": "wdreact$$",
+    "body": "browser.react$$(${1:selector}, ${2:props}, ${3:state})",
+    "description": "Command is a useful command to query multiple React Components by their actual name"
+  },
+  "react$": {
+    "prefix": "wdreact$",
+    "body": "browser.react$$(${1:selector}, ${2:props}, ${3:state})",
+    "description": "Command is a useful command to query React Components by their actual name"
+  },
+  "reloadSession": {
+    "prefix": "wdreloadSession",
+    "body": "browser.reloadSession()",
+    "description": "Creates a new Selenium session with your current capabilities"
+  },
+  "saveRecordingScreen": {
+    "prefix": "wdsaveRecordingScreen",
+    "body": "browser.saveRecordingScreen(${1:filepath})",
+    "description": "**Appium only. Save a video started by startRecordingScreen command to file."
+  },
+  "saveScreenshot": {
+    "prefix": "wdsaveScreenshot",
+    "body": "browser.saveScreenshot(${1:filepath})",
+    "description": "Save a screenshot of the current browsing context to a PNG file on your OS."
+  },
+  "setCookies": {
+    "prefix": "wdsetCookies",
+    "body": "browser.setCookies(${1:cookie})",
+    "description": "Sets one or more cookies for the current page"
+  },
+  "setTimeout": {
+    "prefix": "wdsetTimeout",
+    "body": "browser.setTimeout(${1:timeouts}, ${2:timeouts.implicit}, ${3:timeouts.pageLoad}, ${4:timeouts.script})",
+    "description": "Sets the timeouts associated with the current session"
+  },
+  "setWindowSize": {
+    "prefix": "wdsetWindowSize",
+    "body": "browser.setWindowSize(${1:width}, ${2:height})",
+    "description": "Resizes browser window outer size according to provided width and height."
+  },
+  "switchWindow": {
+    "prefix": "wdswitchWindow",
+    "body": "browser.switchWindow(${1:urlOrTitleToMatch})",
+    "description": "Switch focus to a particular tab / window."
+  },
+  "touchAction": {
+    "prefix": "wdtouchAction",
+    "body": "browser.touchAction(${1:action})",
+    "description": "Touch Action API provides the basis of all gestures that can be automated in Appium"
+  },
+  "uploadFile": {
+    "prefix": "wduploadFile",
+    "body": "browser.uploadFile(${1:localPath})",
+    "description": "Uploads a file to the Selenium Standalone server or other browser driver"
+  },
+  "url": {
+    "prefix": "wdurl",
+    "body": "browser.url(${1:url})",
+    "description": "Protocol binding to load the URL of the browser."
+  },
+  "waitUntil": {
+    "prefix": "wdwaitUntil",
+    "body": "browser.waitUntil(${1:condition}, ${2:timeout}, ${3:timeoutMsg}, ${4:interval})",
+    "description": "This wait command is your universal weapon if you want to wait on something"
+  },
+  "element$$": {
+    "prefix": "wdelement$$",
+    "body": "$$(${1:selector})",
+    "description": "When calling it from an element scope, the driver will look within the children of that element"
+  },
+  "element$": {
+    "prefix": "wdelement$",
+    "body": "$(${1:selector})",
+    "description": "When calling it from an element scope, the driver will look within the children of that element"
+  },
+  "addValue": {
+    "prefix": "wdaddValue",
+    "body": "addValue(${1:value})",
+    "description": "Add a value to an object found by given selector"
+  },
+  "clearValue": {
+    "prefix": "wdclearValue",
+    "body": "clearValue()",
+    "description": "Clear a <textarea> or text <input> element’s value"
+  },
+  "click": {
+    "prefix": "wdclick",
+    "body": "click(${1:options}, ${2:options.button}, ${3:options.x}, ${4:options.y})",
+    "description": "Click on an element."
+  },
+  "elementcustom$$": {
+    "prefix": "wdelementcustom$$",
+    "body": "custom$$(${1:strategyName}, ${2:strategyArguments})",
+    "description": "allows you to use a custom strategy declared by using browser.addLocatorStrategy"
+  },
+  "elementcustom$": {
+    "prefix": "wdelementcustom$",
+    "body": "custom$(${1:strategyName}, ${2:strategyArguments})",
+    "description": "allows you to use a custom strategy declared by using browser.addLocatorStrategy"
+  },
+  "doubleClick": {
+    "prefix": "wddoubleClick",
+    "body": "doubleClick()",
+    "description": "Double-click on an element"
+  },
+  "dragAndDrop": {
+    "prefix": "wddragAndDrop",
+    "body": "dragAndDrop(${1:target}, ${2:duration})",
+    "description": "Drag an item to a destination element."
+  },
+  "getAttribute": {
+    "prefix": "wdgetAttribute",
+    "body": "getAttribute(${1:attributeName})",
+    "description": "Get an attribute from a DOM-element based on the attribute name."
+  },
+  "getCSSProperty": {
+    "prefix": "wdgetCSSProperty",
+    "body": "getCSSProperty(${1:cssProperty})",
+    "description": "Get a css property from a DOM-element selected by given selector"
+  },
+  "getHTML": {
+    "prefix": "wdgetHTML",
+    "body": "getHTML(${1:includeSelectorTag})",
+    "description": "Get source code of specified DOM element by selector."
+  },
+  "getLocation": {
+    "prefix": "wdgetLocation",
+    "body": "getLocation(${1:prop})",
+    "description": "Determine an element’s location on the page."
+  },
+  "getProperty": {
+    "prefix": "wdgetProperty",
+    "body": "getProperty(${1:property})",
+    "description": "The Get Element Property command will return the result of getting a property of an element."
+  },
+  "getSize": {
+    "prefix": "wdgetSize",
+    "body": "getSize(${1:prop})",
+    "description": "Get the width and height for an DOM-element."
+  },
+  "getTagName": {
+    "prefix": "wdgetTagName",
+    "body": "getTagName()",
+    "description": "Get tag name of a DOM-element."
+  },
+  "getText": {
+    "prefix": "wdgetText",
+    "body": "getText()",
+    "description": "Get the text content from a DOM-element."
+  },
+  "getValue": {
+    "prefix": "wdgetValue",
+    "body": "getValue()",
+    "description": "Get the value of a <textarea>, <select> or text <input> found by given selector."
+  },
+  "isClickable": {
+    "prefix": "wdisClickable",
+    "body": "isClickable()",
+    "description": "Return true if the selected DOM-element exists, is visible, is within viewport, is not disabled"
+  },
+  "isDisplayed": {
+    "prefix": "wdisDisplayed",
+    "body": "isDisplayed()",
+    "description": "Return true if the selected DOM-element is displayed."
+  },
+  "isDisplayedInViewport": {
+    "prefix": "wdisDisplayedInViewport",
+    "body": "isDisplayedInViewport()",
+    "description": "Return true if the selected DOM-element found by given selector is partially visible and within the viewport."
+  },
+  "isEnabled": {
+    "prefix": "wdisEnabled",
+    "body": "isEnabled()",
+    "description": "Return true or false if the selected DOM-element is enabled."
+  },
+  "isExisting": {
+    "prefix": "wdisExisting",
+    "body": "isExisting()",
+    "description": "Returns true if element exists in the DOM"
+  },
+  "isFocused": {
+    "prefix": "wdisFocused",
+    "body": "isFocused()",
+    "description": "Return true or false if the selected DOM-element currently has focus."
+  },
+  "isSelected": {
+    "prefix": "wdisSelected",
+    "body": "isSelected()",
+    "description": "Will return true or false whether or not an <option> or <input> element of type checkbox or radio is currently selected."
+  },
+  "moveTo": {
+    "prefix": "wdmoveTo",
+    "body": "moveTo(${1:xoffset}, ${2:yoffset})",
+    "description": "Move the mouse by an offset of the specified element."
+  },
+  "elementReact$$": {
+    "prefix": "wdelementreact$$",
+    "body": "react$$(${1:selector}, ${2:props}, ${3:state})",
+    "description": "Command is a useful command to query multiple React Components by their actual name "
+  },
+  "elementReact$": {
+    "prefix": "wdelementreact$",
+    "body": "react$(${1:selector}, ${2:props}, ${3:state})",
+    "description": "Command is a useful command to query multiple React Components by their actual name "
+  },
+  "elementSaveScreenshot": {
+    "prefix": "wdelementsaveScreenshot",
+    "body": "saveScreenshot(${1:filename})",
+    "description": "Save a screenshot of an element to a PNG file on your OS."
+  },
+  "scrollIntoView": {
+    "prefix": "wdscrollIntoView",
+    "body": "scrollIntoView(${1:scrollIntoViewOptions})",
+    "description": "Scroll element into viewport."
+  },
+  "selectByAttribute": {
+    "prefix": "wdselectByAttribute",
+    "body": "selectByAttribute(${1:attribute}, ${2:value})",
+    "description": "Select option with a specific value."
+  },
+  "selectByIndex": {
+    "prefix": "wdselectByIndex",
+    "body": "selectByIndex(${1:index})",
+    "description": "Select option with a specific index."
+  },
+  "selectByVisibleText": {
+    "prefix": "wdselectByVisibleText",
+    "body": "selectByVisibleText(${1:text})",
+    "description": "Select option with displayed text matching the argument."
+  },
+  "setValue": {
+    "prefix": "wdsetValue",
+    "body": "setValue(${1:value})",
+    "description": "Send a sequence of key strokes to an element (clears value before)"
+  },
+  "shadow$$": {
+    "prefix": "wdshadow$$",
+    "body": "shadow$$(${1:selector})",
+    "description": "Access elements inside a given element's shadowRoot"
+  },
+  "shadow$": {
+    "prefix": "wdshadow$",
+    "body": "shadow$(${1:selector})",
+    "description": "Access element inside a given element's shadowRoot"
+  },
+  "elementTouchAction": {
+    "prefix": "wdelementtouchAction",
+    "body": "touchAction(${1:action})",
+    "description": "The Touch Action API provides the basis of all gestures that can be automated in Appium"
+  },
+  "waitForClickable": {
+    "prefix": "wdwaitForClickable",
+    "body": "waitForClickable(${1:options}, ${2:options.timeout}, ${3:options.reverse}, ${4:options.timeoutMsg}, ${5:options.interval})",
+    "description": "Wait for an element for the provided amount of milliseconds to be clickable or not clickable."
+  },
+  "waitForDisplayed": {
+    "prefix": "wdwaitForDisplayed",
+    "body": "waitForDisplayed(${1:ms}, ${2:reverse}, ${3:error})",
+    "description": "Wait for an element for the provided amount of milliseconds to be displayed or not displayed."
+  },
+  "waitForEnabled": {
+    "prefix": "wdwaitForEnabled",
+    "body": "waitForEnabled(${1:ms}, ${2:reverse}, ${3:error})",
+    "description": "Wait for an element (selected by css selector) for the provided amount of milliseconds to be (dis/en)abled."
+  },
+  "waitForExist": {
+    "prefix": "wdwaitForExist",
+    "body": "waitForExist(${1:ms}, ${2:reverse}, ${3:error})",
+    "description": "WWait for an element for the provided amount of milliseconds to be present within the DOM."
+  }
+}
