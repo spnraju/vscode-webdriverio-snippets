@@ -1,4 +1,284 @@
 {
+  "newSession": {
+    "prefix": "wdnewSession",
+    "body": "browser.newSession(${1:capabilities})",
+    "description": "creates a new WebDriver session with the endpoint node"
+  },
+  "deleteSession": {
+    "prefix": "wddeleteSession",
+    "body": "browser.deleteSession()",
+    "description": "closes any top-level browsing contexts associated with the current session"
+  },
+  "status": {
+    "prefix": "wdstatus",
+    "body": "browser.status()",
+    "description": "returns information about whether a remote end is in a state"
+  },
+  "getTimeouts": {
+    "prefix": "wdgetTimeouts",
+    "body": "browser.getTimeouts()",
+    "description": "Short way to call the findElements command"
+  },
+  "setTimeouts": {
+    "prefix": "wdsetTimeouts",
+    "body": "browser.setTimeouts(${1:implicit}, ${2:pageLoad}, ${3:script})",
+    "description": "Set Timeouts command sets timeout durations associated with the current session"
+  },
+  "getUrl": {
+    "prefix": "wdgetUrl",
+    "body": "browser.getUrl()",
+    "description": "returns the URL of the current top-level browsing context"
+  },
+  "navigateTo": {
+    "prefix": "wdnavigateTo",
+    "body": "browser.navigateTo(${1:url})",
+    "description": "used to cause the user agent to navigate the current top-level browsing context a new location"
+  },
+  "back": {
+    "prefix": "wdback",
+    "body": "browser.back()",
+    "description": "Back command causes the browser to traverse one step backward"
+  },
+  "forward": {
+    "prefix": "wdforward",
+    "body": "browser.forward()",
+    "description": "uForward command causes the browser to traverse one step forward"
+  },
+  "refresh": {
+    "prefix": "wdrefresh",
+    "body": "browser.refresh()",
+    "description": "Refresh command causes the browser to reload the page"
+  },
+  "getTitle": {
+    "prefix": "wdgetTitle",
+    "body": "browser.getTitle()",
+    "description": "returns the document title of the current top-level browsing context"
+  },
+  "getWindowHandle": {
+    "prefix": "wdgetWindowHandle",
+    "body": "browser.getWindowHandle()",
+    "description": "returns the window handle for the current top-level browsing context"
+  },
+  "closeWindow": {
+    "prefix": "wdcloseWindow",
+    "body": "browser.closeWindow()",
+    "description": "closes the current top-level browsing context"
+  },
+  "switchToWindow": {
+    "prefix": "wdswitchToWindow",
+    "body": "browser.switchToWindow(${1:handle})",
+    "description": "used to select the current top-level browsing context for the current session"
+  },
+  "createWindow": {
+    "prefix": "wdcreateWindow",
+    "body": "browser.createWindow(${1:type})",
+    "description": "Create a new top-level browsing context"
+  },
+  "getWindowHandles": {
+    "prefix": "wdgetWindowHandles",
+    "body": "browser.getWindowHandles()",
+    "description": "returns a list of window handles for every open top-level browsing context"
+  },
+  "switchToFrame": {
+    "prefix": "wdswitchToFrame",
+    "body": "browser.switchToFrame(${1:id})",
+    "description": "to select the current top-level browsing context or a child browsing context of the current browsing context"
+  },
+  "switchToParentFrame": {
+    "prefix": "wdswitchToParentFrame",
+    "body": "browser.switchToParentFrame()",
+    "description": "sets the current browsing context for future commands to the parent of the current browsing context"
+  },
+  "getWindowRect": {
+    "prefix": "wdgetWindowRect",
+    "body": "browser.getWindowRect()",
+    "description": "returns the size and position on the screen"
+  },
+  "setWindowRect": {
+    "prefix": "wdsetWindowRect",
+    "body": "browser.setWindowRect(${1:x}, ${2:y}, ${3:width}, ${4:height})",
+    "description": "alters the size and the position of the operating system window"
+  },
+  "maximizeWindow": {
+    "prefix": "wdmaximizeWindow",
+    "body": "browser.maximizeWindow()",
+    "description": "invokes the window manager-specific 'maximize' operation"
+  },
+  "minimizeWindow": {
+    "prefix": "wdminimizeWindow",
+    "body": "browser.minimizeWindow()",
+    "description": "invokes the window manager-specific 'minimizeWindow' operation"
+  },
+  "fullscreenWindow": {
+    "prefix": "wdfullscreenWindow",
+    "body": "browser.fullscreenWindow()",
+    "description": "invokes the window manager-specific 'fullscreenWindow' operation"
+  },
+  "findElement": {
+    "prefix": "wdfindElement",
+    "body": "browser.findElement(${1:using}, ${2:value})",
+    "description": "to find an element in the current browsing context"
+  },
+  "findElements": {
+    "prefix": "wdfindElements",
+    "body": "browser.findElements(${1:using}, ${2:value})",
+    "description": "to find an elements in the current browsing context"
+  },
+  "findElementFromElement": {
+    "prefix": "wdfindElementFromElement",
+    "body": "browser.findElementFromElement(${1:elementId}, ${2:using}, ${3:value})",
+    "description": "used to find an element from a web element in the current browsing context"
+  },
+  "findElementsFromElement": {
+    "prefix": "wdfindElementsFromElement",
+    "body": "browser.findElementsFromElement(${1:elementId}, ${2:using}, ${3:value})",
+    "description": "used to find an elements from a web element in the current browsing context"
+  },
+  "getActiveElement": {
+    "prefix": "wdgetActiveElement",
+    "body": "browser.getActiveElement()",
+    "description": " returns the active element of the current browsing context"
+  },
+  "isElementSelected": {
+    "prefix": "wdisElementSelected",
+    "body": "browser.isElementSelected(${1:elementId})",
+    "description": "determines if the referenced element is selected or not"
+  },
+  "isElementDisplayed": {
+    "prefix": "wdisElementDisplayed",
+    "body": "browser.isElementDisplayed(${1:elementId})",
+    "description": "determines the visibility of an element"
+  },
+  "getElementAttribute": {
+    "prefix": "wdgetElementAttribute",
+    "body": "browser.getElementAttribute(${1:elementId}, ${2:name})",
+    "description": "return the attribute of a web element"
+  },
+  "getElementProperty": {
+    "prefix": "wdgetElementProperty",
+    "body": "browser.getElementProperty(${1:elementId}, ${2:name})",
+    "description": "return the result of getting a property of an element"
+  },
+  "getElementCSSValue": {
+    "prefix": "wdgetElementCSSValue",
+    "body": "browser.getElementCSSValue(${1:elementId}, ${2:propertyName})",
+    "description": "retrieves the computed value of the given CSS property"
+  },
+  "getElementText": {
+    "prefix": "wdgetElementText",
+    "body": "browser.getElementText(${1:elementId})",
+    "description": "return an element’s text 'as rendered'"
+  },
+  "getElementTagName": {
+    "prefix": "wdgetElementTagName",
+    "body": "browser.getElementTagName(${1:elementId})",
+    "description": "returns the qualified element name of the given web element"
+  },
+  "getElementRect": {
+    "prefix": "wdgetElementRect",
+    "body": "browser.getElementRect(${1:elementId})",
+    "description": "returns the dimensions and coordinates of the given web element"
+  },
+  "isElementEnabled": {
+    "prefix": "wdisElementEnabled",
+    "body": "browser.isElementEnabled(${1:elementId})",
+    "description": "determines if the referenced element is enabled or not"
+  },
+  "elementClick": {
+    "prefix": "wdelementClick",
+    "body": "browser.elementClick(${1:elementId})",
+    "description": "scrolls into view the element if it is not already pointer-interactable, and clicks its in-view center point"
+  },
+  "elementClear": {
+    "prefix": "wdelementClear",
+    "body": "browser.elementClear(${1:elementId})",
+    "description": "scrolls into view an editable or resettable element and then attempts to clear"
+  },
+  "elementSendKeys": {
+    "prefix": "wdelementSendKeys",
+    "body": "browser.elementSendKeys(${1:elementId}, ${2:text}, ${3:value})",
+    "description": "scrolls into view the form control element and then sends the provided keys to the element"
+  },
+  "getPageSource": {
+    "prefix": "wdgetPageSource",
+    "body": "browser.getPageSource()",
+    "description": "returns a string serialization of the DOM of the current browsing context"
+  },
+  "executeScript": {
+    "prefix": "wdexecuteScript",
+    "body": "browser.executeScript(${1:script}, ${2:args})",
+    "description": "executes a JavaScript function in the context of the current browsing context"
+  },
+  "executeAsyncScript": {
+    "prefix": "wdexecuteAsyncScript",
+    "body": "browser.executeAsyncScript(${1:script}, ${2:args})",
+    "description": "To execute as an anonymous function"
+  },
+  "getAllCookies": {
+    "prefix": "wdgetAllCookies",
+    "body": "browser.getAllCookies()",
+    "description": "returns all cookies associated with the address of the current browsing context"
+  },
+  "addCookie": {
+    "prefix": "wdaddCookie",
+    "body": "browser.addCookie(${1:cookie})",
+    "description": "adds a single cookie to the cookie store associated with the active document"
+  },
+  "deleteAllCookies": {
+    "prefix": "wddeleteAllCookies",
+    "body": "browser.deleteAllCookies()",
+    "description": "allows deletion of all cookies associated with the active document's address"
+  },
+  "getNamedCookie": {
+    "prefix": "wdgetNamedCookie",
+    "body": "browser.getNamedCookie(${1:name})",
+    "description": "returns the cookie with the requested name from the associated cookies"
+  },
+  "deleteCookie": {
+    "prefix": "wddeleteCookie",
+    "body": "browser.deleteCookie(${1:name})",
+    "description": "allows you to delete a single cookie by parameter name"
+  },
+  "performActions": {
+    "prefix": "wdperformActions",
+    "body": "browser.performActions(${1:actions})",
+    "description": "used to execute complex user actions"
+  },
+  "releaseActions": {
+    "prefix": "wdreleaseActions",
+    "body": "browser.releaseActions()",
+    "description": "used to release all the keys and pointer buttons that are currently depressed"
+  },
+  "dismissAlert": {
+    "prefix": "wddismissAlert",
+    "body": "browser.dismissAlert()",
+    "description": "dismisses a simple dialog if present, otherwise error"
+  },
+  "acceptAlert": {
+    "prefix": "wdacceptAlert",
+    "body": "browser.acceptAlert()",
+    "description": "accepts a simple dialog if present, otherwise error"
+  },
+  "getAlertText": {
+    "prefix": "wdgetAlertText",
+    "body": "browser.getAlertText()",
+    "description": "returns the message of the current user prompt"
+  },
+  "sendAlertText": {
+    "prefix": "wdsendAlertText",
+    "body": "browser.sendAlertText(${1:text})",
+    "description": "sets the text field of a window.prompt user prompt to the given value"
+  },
+  "takeScreenshot": {
+    "prefix": "wdtakeScreenshot",
+    "body": "browser.takeScreenshot()",
+    "description": "takes a screenshot of the top-level browsing context's viewport"
+  },
+  "takeElementScreenshot": {
+    "prefix": "wdtakeElementScreenshot",
+    "body": "browser.takeElementScreenshot(${1:elementId}, ${2:scroll})",
+    "description": "takes a screenshot of the visible region encompassed by the bounding rectangle of an element"
+  },
   "$$": {
     "prefix": "wd$$",
     "body": "browser.$$(${1:selector})",
