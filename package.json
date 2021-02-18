@@ -23,7 +23,8 @@
   },
   "scripts": {
     "publish": "vsce publish",
-    "pack": "vsce package"
+    "pack": "vsce package",
+    "update": "npx npm-check-updates --upgrade && npm install && npm audit fix"
   },
   "categories": [
     "Snippets"
@@ -43,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "vsce": "^1.75.0"
+    "vsce": "^1.85.0"
   }
 }
