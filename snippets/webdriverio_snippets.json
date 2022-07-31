@@ -1,4 +1,184 @@
 {
+  "toHaveUrl": {
+    "prefix": "wdtoHaveUrl",
+    "body": "expect(browser).toHaveUrl(${1:expectedUrl})",
+    "description": "Checks if browser is on a specific page"
+  },
+  "toHaveUrlContaining": {
+    "prefix": "wdtoHaveUrlContaining",
+    "body": "expect(browser).toHaveUrlContaining(${1:expectedValue})",
+    "description": "Checks if browser is on a page URL that contains a value"
+  },
+  "toHaveTitle": {
+    "prefix": "wdtoHaveTitle",
+    "body": "expect(browser).toHaveTitle(${1:expectedTitle})",
+    "description": "Checks if website has a specific title"
+  },
+  "toHaveTitleContaining": {
+    "prefix": "wdtoHaveTitleContaining",
+    "body": "expect(browser).toHaveTitleContaining(${1:expectedValue})",
+    "description": "Checks if website has a specific title that contains a value"
+  },
+  "toBeDisplayed": {
+    "prefix": "wdtoBeDisplayed",
+    "body": "expect(${1:element}).toBeDisplayed()",
+    "description": "Calls isDisplayed on given element"
+  },
+  "toExist": {
+    "prefix": "wdtoExist",
+    "body": "expect(${1:element}).toExist()",
+    "description": "Calls isExisting on given element"
+  },
+  "toBePresent": {
+    "prefix": "wdtoBePresent",
+    "body": "expect(${1:element}).toBePresent()",
+    "description": "Same as toExist"
+  },
+  "toBeExisting": {
+    "prefix": "wdtoBeExisting",
+    "body": "expect(${1:element}).toBeExisting()",
+    "description": "Same as toExist"
+  },
+  "toBeFocused": {
+    "prefix": "wdtoBeFocused",
+    "body": "expect(${1:element}).toBeFocused()",
+    "description": "Checks if element has focus. This assertion only works in a web context"
+  },
+  "toHaveAttribute": {
+    "prefix": "wdtoHaveAttribute",
+    "body": "expect(${1:element}).toHaveAttribute(${2:attribute}, ${3:expectedValue})",
+    "description": "Checks if an element has a certain attribute with a specific value"
+  },
+  "toHaveAttr": {
+    "prefix": "wdtoHaveAttr",
+    "body": "expect(${1:element}).toHaveAttr(${2:attribute}, ${3:expectedValue})",
+    "description": "Same as toHaveAttribute"
+  },
+  "toHaveAttributeContaining": {
+    "prefix": "wdtoHaveAttributeContaining",
+    "body": "expect(${1:element}).toHaveAttributeContaining(${2:attribute}, ${3:expectedValue})",
+    "description": "Checks if an element has a certain attribute that contains a value"
+  },
+  "toHaveAttrContaining": {
+    "prefix": "wdtoHaveAttrContaining",
+    "body": "expect(${1:element}).toHaveAttrContaining(${2:attribute}, ${3:expectedValue})",
+    "description": "Same as toHaveAttributeContaining"
+  },
+  "toHaveElementClass": {
+    "prefix": "wdtoHaveElementClass",
+    "body": "expect(${1:element}).toHaveElementClass(${2:className}, { message: ${3:textOnError}, })",
+    "description": "Checks if an element has a certain class name"
+  },
+  "toHaveElementClassContaining": {
+    "prefix": "wdtoHaveElementClassContaining",
+    "body": "expect(${1:element}).toHaveElementClassContaining(${2:expectedValue})",
+    "description": "Checks if an element has a certain class name that contains provided value"
+  },
+  "toHaveElementProperty": {
+    "prefix": "wdtoHaveElementProperty",
+    "body": "expect(${1:element}).toHaveElementProperty(${2:property}, ${3:expectedValue})",
+    "description": "Checks if an element has a certain property"
+  },
+  "toHaveValue": {
+    "prefix": "wdtoHaveValue",
+    "body": "expect(${1:element}).toHaveValue(${2:expectedValue}, { ignoreCase: ${3:true} })",
+    "description": "Checks if an input element has a certain value"
+  },
+  "toHaveValueContaining": {
+    "prefix": "wdtoHaveValueContaining",
+    "body": "expect(${1:element}).toHaveValueContaining(${2:expectedValue})",
+    "description": "Checks if an input element contains a certain value"
+  },
+  "toBeClickable": {
+    "prefix": "wdtoBeClickable",
+    "body": "expect(${1:element}).toBeClickable()",
+    "description": "Checks if an element can be clicked by calling isClickable on the element"
+  },
+  "toBeDisabled": {
+    "prefix": "wdtoBeDisabled",
+    "body": "expect(${1:element}).toBeDisabled()",
+    "description": "Checks if an element is disabled by calling isEnabled on the element"
+  },
+  "toBeEnabled": {
+    "prefix": "wdtoBeEnabled",
+    "body": "expect(${1:element}).toBeEnabled()",
+    "description": "Checks if an element is enabled by calling isEnabled on the element"
+  },
+  "toBeSelected": {
+    "prefix": "wdtoBeSelected",
+    "body": "expect(${1:element}).toBeSelected()",
+    "description": "Checks if an element is enabled by calling isSelected on the element"
+  },
+  "toBeChecked": {
+    "prefix": "wdtoBeChecked",
+    "body": "expect(${1:element}).toBeChecked()",
+    "description": "Same as toBeSelected"
+  },
+  "toHaveHref": {
+    "prefix": "wdtoHaveHref",
+    "body": "expect(${1:element}).toHaveHref(${2:expectedValue})",
+    "description": "Checks if link element has a specific link target"
+  },
+  "toHaveLink": {
+    "prefix": "wdtoHaveLink",
+    "body": "expect(${1:element}).toHaveLink(${2:expectedValue})",
+    "description": "Same as toHaveHref"
+  },
+  "toHaveHrefContaining": {
+    "prefix": "wdtoHaveHrefContaining",
+    "body": "expect(${1:element}).toHaveHrefContaining(${2:expectedValue})",
+    "description": "Checks if link element contains a specific link target"
+  },
+  "toHaveLinkContaining": {
+    "prefix": "wdtoHaveLinkContaining",
+    "body": "expect(${1:element}).toHaveLinkContaining(${2:expectedValue})",
+    "description": "Same as toHaveHrefContaining"
+  },
+  "toHaveId": {
+    "prefix": "wdtoHaveId",
+    "body": "expect(${1:element}).toHaveId(${2:expectedId})",
+    "description": "Checks if element has a specific id attribute"
+  },
+  "toHaveText": {
+    "prefix": "wdtoHaveText",
+    "body": "expect(${1:element}).toHaveText(${2:expectedText})",
+    "description": "Checks if element has a specific text. Can also be called with an array as parameter in the case where the element can have different texts"
+  },
+  "toHaveTextContaining": {
+    "prefix": "wdtoHaveTextContaining",
+    "body": "expect(${1:element}).toHaveTextContaining(${2:expectedText})",
+    "description": "Checks if element contains a specific text. Can also be called with an array as parameter in the case where the element can have different texts"
+  },
+  "toBeDisplayedInViewport": {
+    "prefix": "wdtoBeDisplayedInViewport",
+    "body": "expect(${1:element}).toBeDisplayedInViewport()",
+    "description": "Checks if an element is within the viewport by calling isDisplayedInViewport on the element"
+  },
+  "toHaveChildren": {
+    "prefix": "wdtoHaveChildren",
+    "body": "expect(${1:element}).toHaveChildren(${2:optionalExpectedCount})",
+    "description": "Checks amount of the fetched element's children by calling element.$('./*') command"
+  },
+  "toBeElementsArrayOfSize": {
+    "prefix": "wdtoBeElementsArrayOfSize",
+    "body": "expect(${1:listItems}).toBeElementsArrayOfSize(${2:expectedCount})",
+    "description": "Checks amount of fetched elements using $$ command"
+  },
+  "toBeRequested": {
+    "prefix": "wdtoBeRequested",
+    "body": "expect(${1:mock}).toBeRequested()",
+    "description": "Checks that mock was called"
+  },
+  "toBeRequestedTimes": {
+    "prefix": "wdtoBeRequestedTimes",
+    "body": "expect(${1:mock}).toBeRequestedTimes(${2:expectedCount})",
+    "description": "Checks that mock was called for the expected amount of times"
+  },
+  "toBeRequestedWith": {
+    "prefix": "wdtoBeRequestedWith",
+    "body": "expect(${1:mock}).toBeRequestedWith({ ${2:expectedOptions} })",
+    "description": "Checks that mock was called according to the expected options"
+  },
   "newSession": {
     "prefix": "wdnewSession",
     "body": "browser.newSession(${1:capabilities})",
