@@ -1,3 +1,6 @@
+## [0.3.1] - 07-08-2022 (DD-MM-YYYY)
+### update commands under WebDriver Protocol
+
 ## [0.3.0] - 01-08-2022 (DD-MM-YYYY)
 ### Add support for expect assertions
 - toHaveUrl, toHaveUrlContaining, toHaveTitle, toHaveTitleContaining, toBeDisplayed, toExist, toBePresent, toBeExisting, toBeFocused, toHaveAttribute, toHaveAttr, toHaveAttributeContaining, toHaveAttrContaining, toHaveElementClass, toHaveElementClassContaining, toHaveElementProperty, toHaveValue, toHaveValueContaining, toBeClickable, toBeDisabled, toBeEnabled, toBeSelected, toBeChecked, toHaveHref, toHaveLink, toHaveHrefContaining, toHaveLinkContaining, toHaveId, toHaveText, toHaveTextContaining, toBeDisplayedInViewport, toHaveChildren, toBeElementsArrayOfSize, toBeRequested, toBeRequestedTimes, toBeRequestedWith

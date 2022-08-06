@@ -259,6 +259,11 @@
     "body": "browser.getWindowHandles()",
     "description": "returns a list of window handles for every open top-level browsing context"
   },
+  "printPage": {
+    "prefix": "wdprintPage",
+    "body": "browser.printPage(${1:optionalOrientation}, ${2:optionalScale}, ${3:optionalBackground}, ${4:optionalWidth}, ${5:optionalHeight}, ${6:optionalTop}, ${7:optionalBottom}, ${8:optionalLeft}, ${9:optionalRight}, ${10:optionalShrinkToFit}, ${11:optionalPageRanges})",
+    "description": "renders the document to a paginated PDF document"
+  },
   "switchToFrame": {
     "prefix": "wdswitchToFrame",
     "body": "browser.switchToFrame(${1:id})",
@@ -299,10 +304,20 @@
     "body": "browser.findElement(${1:using}, ${2:value})",
     "description": "to find an element in the current browsing context"
   },
+  "findElementFromShadowRoot": {
+    "prefix": "wdfindElementFromShadowRoot",
+    "body": "browser.findElementFromShadowRoot(${1:shadowId}, ${2:using}, ${3:value})",
+    "description": "find an element within the shadow root of an element"
+  },
   "findElements": {
     "prefix": "wdfindElements",
     "body": "browser.findElements(${1:using}, ${2:value})",
-    "description": "to find an elements in the current browsing context"
+    "description": "find elements in the current browsing context"
+  },
+  "findElementsFromShadowRoot": {
+    "prefix": "wdfindElementsFromShadowRoot",
+    "body": "browser.findElementsFromShadowRoot(${1:shadowId}, ${2:using}, ${3:value})",
+    "description": "to find elements within the shadow root of an element"
   },
   "findElementFromElement": {
     "prefix": "wdfindElementFromElement",
@@ -314,10 +329,15 @@
     "body": "browser.findElementsFromElement(${1:elementId}, ${2:using}, ${3:value})",
     "description": "used to find an elements from a web element in the current browsing context"
   },
+  "getElementShadowRoot": {
+    "prefix": "wdgetElementShadowRoot",
+    "body": "browser.getElementShadowRoot(${1:elementId})",
+    "description": "Get the shadow root object of an element"
+  },
   "getActiveElement": {
     "prefix": "wdgetActiveElement",
     "body": "browser.getActiveElement()",
-    "description": " returns the active element of the current browsing context"
+    "description": "returns the active element of the current browsing context"
   },
   "isElementSelected": {
     "prefix": "wdisElementSelected",
@@ -458,6 +478,86 @@
     "prefix": "wdtakeElementScreenshot",
     "body": "browser.takeElementScreenshot(${1:elementId}, ${2:scroll})",
     "description": "takes a screenshot of the visible region encompassed by the bounding rectangle of an element"
+  },
+  "getElementComputedRole": {
+    "prefix": "wdgetElementComputedRole",
+    "body": "browser.getElementComputedRole(${1:elementId})",
+    "description": "Get the computed WAI-ARIA role of an element"
+  },
+  "getElementComputedLabel": {
+    "prefix": "wdgetElementComputedLabel",
+    "body": "browser.getElementComputedLabel(${1:elementId})",
+    "description": "Get the computed WAI-ARIA role of an element"
+  },
+  "setPermissions": {
+    "prefix": "wdsetPermissions",
+    "body": "browser.setPermissions(${1:descriptor}, ${2:state}, ${3:OptionalOneRealm})",
+    "description": "Simulates user modification of a PermissionDescriptor's permission state"
+  },
+  "generateTestReport": {
+    "prefix": "wdgenerateTestReport",
+    "body": "browser.generateTestReport(${1:message}, ${2:group})",
+    "description": "Generates a report for testing. Extension for Reporting API"
+  },
+  "createMockSensor": {
+    "prefix": "wdcreateMockSensor",
+    "body": "browser.createMockSensor(${1:mockSensorType}, ${2:maxSamplingFrequency}, ${3:minSamplingFrequency})",
+    "description": "Creates a mock sensor to emulate sensors like Ambient Light Sensor"
+  },
+  "getMockSensor": {
+    "prefix": "wdgetMockSensor",
+    "body": "browser.getMockSensor(${1:type})",
+    "description": "Retrieves information about a given type of mock sensor"
+  },
+  "updateMockSensor": {
+    "prefix": "wdupdateMockSensor",
+    "body": "browser.updateMockSensor(${1:type}, ${2:mockSensorType}, ${3:maxSamplingFrequency}, ${4:minSamplingFrequency})",
+    "description": "Updates the mock sensor type"
+  },
+  "deleteMockSensor": {
+    "prefix": "wddeleteMockSensor",
+    "body": "browser.deleteMockSensor(${1:type})",
+    "description": "Delete Session command closes any top-level browsing contexts"
+  },
+  "setTimeZone": {
+    "prefix": "wdsetTimeZone",
+    "body": "browser.setTimeZone(${1:time_zone})",
+    "description": "Simulates the changing of a time zone for the purposes of testing"
+  },
+  "addVirtualAuthenticator": {
+    "prefix": "wdaddVirtualAuthenticator",
+    "body": "browser.addVirtualAuthenticator(${1:optionalProtocol}, ${2:optionalTransport}, ${3:optionalHasResidentKey}, ${4:optionalHasUserVerification}, ${5:optionalIsUserConsenting}, ${6:optionalIsUserVerified}, ${7:optionalExtensions}, ${8:optionalUvm)",
+    "description": "Creates a software Virtual Authenticator"
+  },
+  "removeVirtualAuthenticator": {
+    "prefix": "wdremoveVirtualAuthenticator",
+    "body": "browser.removeVirtualAuthenticator(${1:authenticatorId})",
+    "description": "Removes a previously created Virtual Authenticator"
+  },
+  "addCredential": {
+    "prefix": "wdaddCredential",
+    "body": "browser.addCredential(${1:credentialId}, ${2:isResidentCredential}, ${3:rpId}, ${4:privateKey}, ${5:userHandle}, ${6:signCount}, ${7:largeBlob})",
+    "description": "Injects a Public Key Credential Source into an existing Virtual Authenticator"
+  },
+  "getCredentials": {
+    "prefix": "wdgetCredentials",
+    "body": "browser.getCredentials(${1:authenticatorId})",
+    "description": "Returns one Credential Parameters object for every Public Key Credential Source stored in a Virtual Authenticator"
+  },
+  "removeAllCredentials": {
+    "prefix": "wdremoveAllCredentials",
+    "body": "browser.removeAllCredentials(${1:authenticatorId})",
+    "description": "Removes all Public Key Credential Sources stored on a Virtual Authenticator"
+  },
+  "removeCredential": {
+    "prefix": "wdremoveCredential",
+    "body": "browser.removeCredential(${1:authenticatorId}, ${2:credentialId})",
+    "description": "Removes a Public Key Credential Source stored on a Virtual Authenticator"
+  },
+  "setUserVerified": {
+    "prefix": "wdsetUserVerified",
+    "body": "browser.setUserVerified(${1:authenticatorId}, ${2:credentialId})",
+    "description": "sets the isUserVerified property on the Virtual Authenticator"
   },
   "$$": {
     "prefix": "wd$$",
